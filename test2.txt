@@ -1,0 +1,9 @@
+c Test 2, Medium winning table
+c Expected True
+p 6
+green oval solid 2
+red oval stripped 2
+purple diamond stripped 2
+red oval solid 3
+red squiggle outline 2
+red oval outline 1

@@ -1,0 +1,6 @@
+c Test 6, Small losing table
+c Expected False
+p 3
+green oval solid 1
+purple diamond stripped 2
+red squiggle outline 2

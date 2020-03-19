@@ -1,0 +1,6 @@
+c Test 1, Small winning table
+c Expected True
+p 3
+green oval solid 2
+purple diamond stripped 2
+red squiggle outline 2

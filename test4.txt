@@ -1,0 +1,15 @@
+c Test 4, Large losing table
+c Expected False
+p 12
+purple oval stripped 1
+green oval solid 2
+purple diamond stripped 1
+red oval stripped 2
+red diamond solid 3
+purple squiggle stripped 1
+purple diamond stripped 2
+red oval solid 3
+purple oval solid 2
+green squiggle solid 1
+red squiggle outline 2
+red oval outline 2
