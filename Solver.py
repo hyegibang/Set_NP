@@ -1,3 +1,29 @@
+import random
+class deck:
+    def __init__(self):
+        self.cards=[]
+        self.table=[]
+    def add_cards(self):
+        cards = []
+        for i in ("green","purple","red"):
+            for j in ("oval","diamond","squiggle"):
+                for k in ("1","2","3"):
+                    for l in ("solid","stripped","outline"):
+                        self.cards.append(card(i,j,k,l))
+        #return cards
+
+    def make_table(self):
+        for i in range (0,11):
+            y=random.choice(self.cards)
+            self.table.append(y)
+
+class card:
+    def __init__(self,color,shape,shade,number):
+        self.color=color
+        self.shape=shape
+        self.shade=shade
+        self.number=number
+
 def matches(table):
     matches = []
     for i in range(len(table)):
@@ -27,3 +53,14 @@ def isCardMatch(c1,c2,c3):
         return True
     else:
         return False
+
+
+
+
+
+
+if __name__ == '__main__':
+    deckCard = deck()
+    deckCard.add_cards()
+    deckCard.make_table()
+    match_list = matches(deckCard.table)
