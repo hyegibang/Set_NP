@@ -5,4 +5,4 @@
 
 #### This NP Set Solver takes in a board state of set cards and determines if it is possible to clear the table. 
 
-#### Check out our [description](../SetDescription.pdf) and [NP Proof](../Proof.pdf) for more details.
+#### Check out our [description](Set_NP/SetDescription.pdf) and [NP Proof](Set_NP/Proof.pdf) for more details.
