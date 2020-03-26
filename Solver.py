@@ -2,6 +2,11 @@ from classes import *
 import sys
 
 def Solve(table, matches, id=0):
+    """
+    Given a deck of card,represented through a table,  and the all possible matches
+    within the card, determines whether the given deck of card fulfills to be a "set"
+    and return the corresponding boolean.
+    """
 
     #Base Cases
     if(len(table)==0):
@@ -29,6 +34,9 @@ def Solve(table, matches, id=0):
         return False
 
 def updateTable(table, match):
+    """
+    Given a table of card, update the card by removing a selected match.
+    """
     newTable = []
     idsToRemove = []
     for card in match:
@@ -39,6 +47,9 @@ def updateTable(table, match):
     return newTable
 
 def hasMatchingCards(m1, m2):
+    """
+    Checks whether the given deck has matching cards.
+    """
     for c1 in m1:
         for c2 in m2:
             if(c1.id == c2.id):
@@ -46,6 +57,9 @@ def hasMatchingCards(m1, m2):
     return False
 
 def updateMatches(matches, match):
+    """
+    Updates the matches as matches are being removed.
+    """
     newMatches = []
     for rawMatch in matches:
         if(not hasMatchingCards(rawMatch, match)):
@@ -54,6 +68,9 @@ def updateMatches(matches, match):
 
 
 def matches(table):
+    """
+    Returns all possible matches from the table of cards
+    """
     matches = []
     for i in range(len(table)):
         for j in range(1,len(table)):
@@ -102,7 +119,7 @@ def isCardMatch(c1,c2,c3):
         shadeMatched = True
 
     #If all are dimensions match, then this is a match
-    if( colorMatched and numberMatched and shapeMatched and shadeMatched):
+    if(colorMatched and numberMatched and shapeMatched and shadeMatched):
         return True
     else:
         return False
@@ -110,6 +127,7 @@ def isCardMatch(c1,c2,c3):
 if __name__ == '__main__':
     x=deck()
     x.add_cards()
+    
     if(len(sys.argv) > 1):
         testFile = sys.argv[1]
         x.makeTableFromFile(testFile)
