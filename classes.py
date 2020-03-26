@@ -2,6 +2,10 @@ import random
 from Solver import *
 
 class deck:
+    """
+    Creates a deck of card, a total of 81 cards. With the deck of cards, it randomly
+    selects 12 cards and puts them in a table
+    """
     def __init__(self):
         self.cards=[]
         self.table=[]
@@ -44,6 +48,9 @@ class deck:
 
 
 class card:
+    """
+    Every Card has four different property: color, shape, shade, and quantity.
+    """
     def __init__(self,color,shape,shade,number,id):
         self.color=color
         self.shape=shape
